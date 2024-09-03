@@ -10,6 +10,7 @@ public class PhoneBookTest {
     @BeforeEach
     void preparatoryProcedures() {
         phoneBook = new PhoneBook();
+        phoneBook.add("TestName", 88005009120L);
     }
 
     @Test
@@ -19,14 +20,17 @@ public class PhoneBookTest {
 
     @Test
     void checkThatTheAddMethodAddsValidElement() {
-        phoneBook.add("TestName", 88005009120L);
         assertTrue(phoneBook.phoneBookMap.containsKey("TestName"));
     }
 
     @Test
-    void elementNameSearch() {
-        phoneBook.add("TestName", 88005009120L);
+    void elementSearchByName() {
         assertEquals("TestName", phoneBook.findByNumber(88005009120L));
+    }
+
+    @Test
+    void elementSearchByNumber() {
+        assertEquals(88005009120L, phoneBook.findByName("TestName"));
     }
 
 
