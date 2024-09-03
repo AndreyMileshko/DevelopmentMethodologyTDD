@@ -10,4 +10,8 @@ public class PhoneBook {
         return phoneBookMap.size();
     }
 
+    public String findByNumber(Long number) {
+        return null;
+    }
+
 }
