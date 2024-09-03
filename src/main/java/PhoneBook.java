@@ -6,7 +6,8 @@ public class PhoneBook {
     public final Map<String, Long> phoneBookMap = new TreeMap<>();
 
     public int add(String name, Long number) {
-        return 0;
+        phoneBookMap.put(name, number);
+        return phoneBookMap.size();
     }
 
 }
