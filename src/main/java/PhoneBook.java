@@ -29,4 +29,10 @@ public class PhoneBook {
         }
         return phoneBookMap.get(name);
     }
+
+    public void printAllNames() {
+        for (String name: phoneBookMap.keySet()) {
+            System.out.println(name);
+        }
+    }
 }
